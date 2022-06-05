@@ -1,0 +1,17 @@
+class Solution
+{
+    public static boolean isSorted(Node head)
+    {
+        // your code here 
+        boolean flaga = true;
+        boolean flagd = true;
+        Node curr = head;
+        while (curr != null && curr.next != null && (flaga || flagd)) {
+            if (curr.data < curr.next.data) flagd = false;
+            if (curr.data > curr.next.data) flaga = false;
+            curr = curr.next;
+        }
+        return flaga || flagd;
+
+    }
+}

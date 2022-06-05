@@ -1,0 +1,16 @@
+class Delete
+{
+    static Node deleteTail(Node head)
+    {
+        // Your code here
+        if ( head == null ) // no elements in LL
+            return null;
+        if ( head.next == null) // 1 element in LL
+            return null;
+        Node curr = head;
+        while ( curr.next.next != null )
+            curr = curr.next;
+        curr.next = null;
+        return head;
+    }
+}

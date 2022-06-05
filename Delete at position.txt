@@ -1,0 +1,17 @@
+
+class Delete
+{
+    Node deleteAtPosition(Node head, int pos)
+    {
+        // your code here
+        if ( pos == 1 )
+         return head.next;
+        
+        Node curr = head;
+        for ( int i = 1; i <= pos-2; i++ )
+            curr = curr.next;
+        curr.next = curr.next.next;
+        return head;
+        
+    }
+}

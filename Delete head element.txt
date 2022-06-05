@@ -1,0 +1,11 @@
+class Delete
+{
+    Node deleteHead(Node head)
+    {
+        // Your code here   
+        if ( head == null )
+            return null;
+        return head.next;
+        
+    }
+}
